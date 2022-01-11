@@ -11,7 +11,8 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
-const CONNECTION_URL = process.env.monogoUrl;
+const CONNECTION_URL =
+  "mongodb+srv://kodanda:Kodanda@123@cluster0.9duqt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
 mongoose
