@@ -6,12 +6,13 @@ import {
   deletePost,
   likePost,
 } from "../controller/posts.js";
+import auth from "../middleware/auth.js";
 const router = express.Router();
 
 router.get("/", getPosts);
 
-router.post("/", createPost);
-router.post("/:id", updatePost);
-router.get("/:id/deletePost", deletePost);
-router.get("/:id/likePost", likePost);
+router.post("/", auth, createPost);
+router.post("/:id", auth, updatePost);
+router.get("/:id/deletePost", auth, deletePost);
+router.get("/:id/likePost", auth, likePost);
 export default router;
