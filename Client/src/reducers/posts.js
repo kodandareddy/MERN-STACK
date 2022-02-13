@@ -14,7 +14,7 @@ const reducer = (posts = [], action) => {
     case actionTypes.LIKE:
       return posts.map((post) => {
         if (post._id == action.payload._id) {
-          return { ...post, likeCount: action.payload.likeCount };
+          return { ...post, likes: action.payload.likes };
         }
         return { ...post };
       });

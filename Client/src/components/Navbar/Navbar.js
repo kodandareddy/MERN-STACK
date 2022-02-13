@@ -55,7 +55,7 @@ const Navbar = () => {
               {user?.result.name}
             </Typography>
             <GoogleLogout
-              clientId="599845896475-msp81oj1n0c0ugbfcgjrtl9e35a2qfia.apps.googleusercontent.com"
+              clientId={process.env.REACT_APP_CLIENT_ID}
               render={(renderProps) => (
                 <Button
                   variant="contained"
