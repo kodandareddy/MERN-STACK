@@ -2,10 +2,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles({
   media: {
-    height: 0,
-    paddingTop: "56.25%",
+    height: "200px",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     backgroundBlendMode: "darken",
+    "&:before": {},
   },
   border: {
     border: "solid",
@@ -20,7 +20,13 @@ export default makeStyles({
     borderRadius: "15px",
     height: "100%",
     position: "relative",
+    cursor: "pointer",
+    transition: "transform .2s ease-in-out",
+    "&:hover": {
+      transform: " translateY(-10px)",
+    },
   },
+
   overlay: {
     position: "absolute",
     top: "20px",
@@ -40,6 +46,14 @@ export default makeStyles({
     display: "flex",
     justifyContent: "space-between",
     margin: "20px",
+  },
+  detail: {
+    padding: "10px",
+    background: "#ff1c00",
+    borderRadius: "50px",
+    margin: "0px 5px",
+    color: "#fff",
+    font: "bold",
   },
   title: {
     padding: "0 16px",
